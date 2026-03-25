@@ -205,7 +205,6 @@ extern "C" {
         // Always register the hash so that the device will be captured when
         // it appears, even if it is not currently connected.
         registered_devices_hashes.insert(device_hash);
-
         // Check if the device is currently connected (for the return value).
         return consume_devices([device_hash](mach_port_t current_device) {
             // Don't match karabiner devices
